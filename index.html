@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="main_container">
+        <header class="container">
+            <!-- Navbar -->
+            <nav>
+                <img class="logo" src="./images/Airbnb_Logo.png" alt="airbnb logo">
+                <ul class="navCenter">
+                    <li>Places to stay</li>
+                    <li>Experiences</li>
+                    <li>Online Experiences</li>
+                </ul>
+                <ul class="navRight">
+                    <li>Become a Host</li>
+                    <li><span class="material-symbols-outlined">
+                            language
+                        </span></li>
+                    <li class="menuIcon">
+                        <span class="material-symbols-outlined">menu</span>
+                        <img src="./images/profile-icon.jpg" alt="" class="profileImg" />
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <!-- Search bar -->
+        <form class="searchBar" id="searchBar">
+            <label for="location">Location
+                <input type="text" name="location" id="locationInput" placeholder="Enter Desired Location"
+                    required /></label>
+            <label for="checkInDate">Check In
+                <input type="date" name="checkInDate" id="dateInput" required /></label>
+            <label for="checkOutDate">Check Out
+                <input type="date" name="checkOutDate" id="dateInput" required /></label>
+            <label for="guestCount">Guests
+                <input type="number" name="guestCount" id="guestCount" step="1" value="1" min="1" max="20"
+                    placeholder="Guest Count" required /></label>
+            <button type="submit" name="submit" id="formSubmitBtn"><span class="material-symbols-outlined">
+                    search
+                </span></button>
+        </form>
+
+        <!-- banner -->
+        <div class="container">
+            <section class="banner">
+                <div class="bannerCaption">
+                    <p>Not sure where to go ? Perfect.</p>
+                    <button>I'm flexible</button>
+                </div>
+            </section>
+        </div>
+        <section name="card section" class="cardSection container">
+            <h2>Inspiration for your next trip</h2>
+            <div class="cardGrid">
+                <div class="cityCard" id="cityCard">
+                    <img src="./images/guitar.png" id="cardImage" alt="card image">
+                    <div class="cardDetail red">
+                        <h3 id="cardTitle">NashVille</h3>
+                        <p id="cardDistance">53 Miles Away</p>
+                    </div>
+                </div>
+                <div class="cityCard" id="cityCard">
+                    <img src="./images/lake.png" id="cardImage" alt="card image">
+                    <div class="cardDetail green">
+                        <h3 id="cardTitle">South Heaven</h3>
+                        <p id="cardDistance">168 Miles Away</p>
+                    </div>
+                </div>
+                <div class="cityCard" id="cityCard">
+                    <img src="./images/village.png" id="cardImage" alt="card image">
+                    <div class="cardDetail purple">
+                        <h3 id="cardTitle">Stanton</h3>
+                        <p id="cardDistance">192 Miles Away</p>
+                    </div>
+                </div>
+                <div class="cityCard" id="cityCard">
+                    <img src="./images/lake.png" id="cardImage" alt="card image">
+                    <div class="cardDetail red2">
+                        <h3 id="cardTitle">New Buffalo</h3>
+                        <p id="cardDistance">130 Miles Away</p>
+                    </div>
+                </div>
+                <div class="cityCard" id="cityCard">
+                    <img src="./images/village.png" id="cardImage" alt="card image">
+                    <div class="cardDetail purple">
+                        <h3 id="cardTitle">Hell Town</h3>
+                        <p id="cardDistance">1 Miles Away</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="discoverSection cardSection container">
+            <h2>Discover Airbnb Experiences</h2>
+            <div class="discoverGrid">
+                <div class="discoverCard">
+                    <img src="./images/todo_trip.jpg" alt="">
+                    <div class="details">
+                        <p>Things to do on your trip</p>
+                        <button>Experiences</button>
+                    </div>
+                </div>
+                <div class="discoverCard">
+                    <img src="./images/todo_home.jpeg" alt="">
+                    <div class="details">
+                        <p>Things to do from Home</p>
+                        <button>Online Experiences</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offerSection container">
+            <div class="details">
+                <p>Shop Airbnb gift cards</p>
+                <button class="dark">Learn more</button>
+            </div>
+            <img src="./images/offerCard.png" alt="">
+        </section>
+        <section class="hostingBannerSection container">
+            <div class="discoverCard">
+                <img src="./images/call_girl.jpg" alt="">
+                <div class="details">
+                    <p>Questions about hosting ?</p>
+                    <button>Ask a Superhost</button>
+                </div>
+            </div>
+        </section>
+        <section class="destinationSection container">
+            <h2>Inspiration for future getaways</h2>
+            <ul>
+                <li>Destination for arts &</li>
+                <li>Destination for outdoor adventure</li>
+                <li>Mountain cabins</li>
+                <li>Beach Destinations</li>
+                <li>Popular Destinations</li>
+                <li>Unique Stays</li>
+            </ul>
+            <div class="destination-locations">
+                <div>
+                    <p>Phoenix</p>
+                    <p class="t-grey">Arizona</p>
+                </div>
+                <div>
+                    <p>Hot Springs</p>
+                    <p class="t-grey">Akansas</p>
+                </div>
+                <div>
+                    <p>Los Angeles</p>
+                    <p class="t-grey">California</p>
+                </div>
+                <div>
+                    <p>San Diego</p>
+                    <p class="t-grey">California</p>
+                </div>
+                <div>
+                    <p>San Francisco</p>
+                    <p class="t-grey">California</p>
+                </div>
+                <div>
+                    <p>Barcelona</p>
+                    <p class="t-grey">Catalonia</p>
+                </div>
+                <div>
+                    <p>Prague</p>
+                    <p class="t-grey">Czechia</p>
+                </div>
+                <div>
+                    <p>Washington</p>
+                    <p class="t-grey">District of Columbia</p>
+                </div>
+                <div>
+                    <p>Keswick</p>
+                    <p class="t-grey">England</p>
+                </div>
+                <div>
+                    <p>London</p>
+                    <p class="t-grey">England</p>
+                </div>
+                <div>
+                    <p>Scarborough</p>
+                    <p class="t-grey">England</p>
+                </div>
+                <div>
+                    <u style="cursor: pointer;">Show More</u>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div class="footerMenu">
+            <ol>
+                <h4>Support</h4>
+                <li>Help Center</li>
+                <li>Safety Information</li>
+                <li>Cancellation Options</li>
+                <li>Our COVID-19 Response</li>
+                <li>Supporting people with disabilities</li>
+                <li>Report a neightbourhood concern</li>
+            </ol>
+            <ol>
+                <h4>Community</h4>
+                <li>Airbnb.org: disaster relief housing</li>
+                <li>Support: Afghan refugees</li>
+                <li>Celebrating diversity & belonging</li>
+                <li>Combating discrimination</li>
+            </ol>
+            <ol>
+                <h4>Hosting</h4>
+                <li>Try Hosting</li>
+                <li>AirCover: protection for Hosts</li>
+                <li>Explore hosting resources</li>
+                <li>Visit our community form</li>
+                <li>How to host responsibly</li>
+            </ol>
+            <ol>
+                <h4>About</h4>
+                <li>News Room</li>
+                <li>Learn about new features</li>
+                <li>Letters from our founders</li>
+                <li>Careers</li>
+                <li>Investors</li>
+                <li>Airbnb Luxe</li>
+            </ol>
+        </div>
+        <div class="footerBar">Made By Tahreem Tarique ❣️</div>
+    </footer>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

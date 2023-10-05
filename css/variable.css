@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-red: rgb(255, 56, 92);
+    --color-lightred: rgb(255, 130, 153);
+    --color-orange: rgb(245, 158, 11);
+    --color-orange: rgb(255, 201, 108);
+    --color-green: rgb(16, 185, 129);
+    --color-purple: rgb(84, 0, 91);
+    --color-red2: rgb(141, 1, 55);
+    --color-black: rgb(27, 27, 27);
+    --color-white: rgb(255, 255, 255);
+    --color-lightgrey: rgb(233, 233, 233);
+    --color-darkgrey: rgb(120, 120, 120);
+    --color-grey: rgb(163, 163, 163);
+    --font-family: 'Onest', sans-serif;
+}
+
+.dark {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.red {
+    background-color: var(--color-red);
+    color: var(--color-white);
+}
+
+.green {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.red2 {
+    background-color: var(--color-red2);
+    color: var(--color-white);
+}
+
+.purple {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+}
+
+.t-grey {
+    color: var(--color-darkgrey);
+}
+
+.t-red {
+    color: var(--color-red);
+}
+
+.t-green {
+    color: var(--color-green);
+}

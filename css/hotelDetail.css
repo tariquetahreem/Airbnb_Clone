@@ -1,0 +1,350 @@
+@import url('./variable.css');
+
+html body {
+    font-size: 14px;
+    background-color: var(--color-white);
+    font-weight: 500;
+}
+
+.container {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+header nav {
+    color: var(--color-black);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.searchBar {
+    border: 1px solid var(--color-grey);
+    width: 20%;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.hotelIntroSection {
+    padding: 20px 0;
+
+    & .hotelDetails {
+        display: flex;
+        justify-content: space-between;
+
+        & li span {
+            font-size: 1rem;
+        }
+    }
+
+}
+
+ul li {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 5px;
+
+    &:hover {
+        color: var(--color-red);
+    }
+}
+
+.galleryGrid {
+    display: grid;
+    gap: 8px;
+    margin: 2rem 0;
+    aspect-ratio: 2/1;
+    /* height: 60vh; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+
+    & .grid-item {
+        background-color: #ccc;
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.2s;
+
+            &:hover {
+                scale: 1.03;
+            }
+        }
+    }
+
+    & .grid-item-1 {
+        grid-row: span 2;
+        grid-column: span 2;
+    }
+}
+
+.hotelDetailSection {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+
+    & .facility {
+        width: 60%;
+
+        & .host {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--color-grey);
+
+            & .hostProfile {
+                position: relative;
+                width: 3rem;
+
+                & .profileImg {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    z-index: -1;
+                }
+
+                & .superHostTag {
+                    /* z-index: 110; */
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+
+        }
+
+        & h2 {
+            margin: 0 0 7px 0;
+        }
+
+        & .placePhotos {
+            margin: 50px 0 0 0;
+            padding: 20px 0;
+            border-top: 1px solid var(--color-grey);
+            border-bottom: 1px solid var(--color-grey);
+
+            & .cardSection {
+
+                display: grid;
+                gap: 10px;
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+                & .card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+
+                    & img {
+                        width: 220px;
+                        aspect-ratio: 2/1.2;
+                        border-radius: 8px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    & .priceBox {
+        align-self: flex-start;
+        width: 35%;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 5px var(--color-grey);
+        padding: 20px;
+
+        & .top {
+            display: flex;
+            justify-content: space-between;
+
+            & .rate>span {
+                font-size: 1.3rem;
+            }
+
+            & li>span {
+                font-size: 1.1rem;
+            }
+        }
+
+        & .summaryBox {
+            border-radius: 6px;
+            margin: 10px 0;
+            border: 2px solid var(--color-grey);
+
+            & .topBox {
+                display: flex;
+                padding: 10px;
+                border-bottom: 1px solid var(--color-grey);
+
+                & .checkIn {
+                    width: 50%;
+                }
+            }
+
+            & .bottomBox {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+
+            }
+        }
+
+        & button {
+            width: 100%;
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        &>p {
+            text-align: center;
+        }
+
+        &>table {
+            width: 100%;
+            border-collapse: collapse;
+
+            & tbody {
+                & tr {
+
+                    &:last-child {
+                        border-top: 1px solid var(--color-grey);
+                        font-size: 1.2rem;
+                        padding-top: 5px;
+                    }
+                }
+
+                & td {
+                    padding: 8px;
+
+                    &:nth-child(2) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+
+    & .facilityPoints {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding: 10px 0;
+
+        & .icons {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+.mapSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.mapIframe {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--color-lightgrey);
+    aspect-ratio: 2/1;
+}
+
+.hostSummarySection {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    border-top: 1px solid var(--color-grey);
+}
+
+.hostSummary {
+    display: flex;
+    gap: 20px;
+
+    & .hostProfile {
+        display: flex;
+        position: relative;
+        width: 40px;
+        height: 50px;
+
+        & img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        & .superHostTag {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    & .hostDetails {
+        align-self: flex-start;
+
+        & h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        & li span {
+            font-size: 1rem;
+        }
+    }
+}
+
+.superHostDetails {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+
+    & p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:850px) {
+    .hotelDetailSection {
+        flex-direction: column-reverse;
+        gap: 30px;
+
+        & .facility {
+            width: 100%;
+        }
+
+
+        .priceBox {
+            width: 100%;
+        }
+    }
+
+    & .navRight li {
+        display: none;
+    }
+}
+
+
+@media (max-width: 562px) {
+    .searchBar input {
+        display: none;
+    }
+}

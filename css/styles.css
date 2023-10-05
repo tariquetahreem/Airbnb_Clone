@@ -1,0 +1,513 @@
+@import url('./variable.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+html body {
+    font-size: 14px;
+    background-color: var(--color-black);
+    font-weight: 500;
+}
+
+.main_container {
+    max-width: 1800px;
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.container {
+    width: 100%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.1s;
+
+    &:active {
+        scale: 0.95;
+    }
+
+    &:hover {
+        opacity: 90%;
+    }
+}
+
+ul li {
+    position: relative;
+    padding: 3px;
+    cursor: pointer;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+
+    & nav {
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--color-white);
+
+        & .navCenter {
+            gap: 25px;
+
+            & li:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 40%;
+                margin: auto;
+                border-radius: 8px;
+                width: 15px;
+                height: 2px;
+                background-color: var(--color-white);
+            }
+
+
+
+        }
+
+        & .navRight {
+            & .menuIcon {
+                cursor: pointer;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--color-white);
+                padding: 5px;
+                border-radius: 25px;
+                color: var(--color-black);
+                font-weight: 600;
+
+            }
+        }
+    }
+}
+
+.profileImg {
+    background-color: var(--color-grey);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.searchBar {
+    margin: auto;
+    display: flex;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border-radius: 25px;
+    width: 50%;
+    padding: 5px 5px 5px 20px;
+    justify-content: center;
+    gap: 15px;
+
+    & #formSubmitBtn {
+        background-color: var(--color-red);
+        padding: 5px 7px;
+        display: flex;
+        color: var(--color-white);
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+input {
+    outline: none;
+    border: none;
+    min-width: 110px;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+    background: url('../images/banner.jpeg');
+    aspect-ratio: 3/1.25;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 10px 0;
+
+    & .bannerCaption {
+        position: absolute;
+        bottom: 100px;
+        text-align: center;
+        width: 100%;
+
+        & p {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin: 20px;
+            text-shadow: 2px 2px 5px rgb(27, 27, 27);
+        }
+    }
+}
+
+h2 {
+    margin: 25px 0;
+    font-size: 1.5rem;
+    color: var(--color-red);
+}
+
+.cardSection {
+    background-color: var(--color-white);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    & .cardGrid {
+        display: grid;
+        gap: 25px;
+        place-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+        & .cityCard {
+            height: 400px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px 0.05px var(--color-lightgrey);
+
+            & img {
+                width: 100%;
+                height: 50%;
+            }
+
+            & .cardDetail {
+                height: 50%;
+                padding: 10px;
+                color: var(--color-white);
+                font-size: 1.2rem;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+
+                & h3 {
+                    font-size: 1.6rem;
+                    margin: 6px 0;
+                }
+            }
+
+            & img {
+                width: 100%;
+                height: 1/1;
+            }
+        }
+    }
+}
+
+.discoverSection {
+    background-color: var(--color-white);
+    padding-top: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+
+    & .discoverGrid {
+        display: grid;
+        width: 100%;
+        gap: 25px;
+        place-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+.discoverCard {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1/0.8;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    & .details {
+        position: absolute;
+        left: 4rem;
+        color: var(--color-white);
+        z-index: 11;
+
+        & p {
+            font-size: 2rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 5px rgb(27, 27, 27);
+            margin: 30px 0;
+        }
+    }
+}
+
+.offerSection {
+    background-color: var(--color-white);
+    padding-top: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .details {
+        width: 30%;
+        margin-left: 50px;
+
+        & p {
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+    }
+
+    & img {
+        width: 60%;
+
+    }
+}
+
+.hostingBannerSection {
+    background-color: var(--color-white);
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+
+    & .discoverCard {
+        width: 100%;
+        aspect-ratio: 2/1;
+
+        & .details {
+            width: 30%;
+            height: 50%;
+
+            & p {
+                font-size: 5rem;
+                text-shadow: 2px 2px 5px rgb(27, 27, 27);
+            }
+
+            & button {
+                bottom: 0;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.destinationSection {
+    background-color: var(--color-white);
+    padding-top: 10px;
+    width: 100%;
+    padding-bottom: 10px;
+
+    & ul {
+        border-bottom: 1px solid var(--color-lightgrey);
+        gap: 15px;
+        color: var(--color-darkgrey);
+
+        & li {
+            margin: 8px 0;
+
+            &:hover {
+                color: var(--color-black);
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    right: 40%;
+                    margin: auto;
+                    border-radius: 8px;
+                    width: 15px;
+                    height: 2px;
+                    background-color: var(--color-white);
+                    background-color: var(--color-darkgrey);
+                    width: 100%;
+                    left: 0;
+                    bottom: -8px;
+                }
+            }
+        }
+    }
+
+    & .destination-locations {
+        display: grid;
+        margin: 20px;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+footer {
+    background-color: var(--color-lightgrey);
+    width: 100%;
+    border-top: 1px solid var(--color-darkgrey);
+    padding-top: 60px;
+
+}
+
+.footerMenu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    & ol {
+        list-style: none;
+
+        & li {
+            color: var(--color-darkgrey);
+            margin: 8px 0;
+            cursor: pointer;
+
+            &:hover {
+                color: var(--color-red);
+            }
+        }
+    }
+}
+
+.footerBar {
+    text-align: center;
+    margin-top: 8px;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    border-top: 1px solid var(--color-grey);
+
+    &:hover {
+        color: var(--color-red);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1080px) {
+    .searchBar {
+        width: 100%;
+    }
+
+    .hostingBannerSection {
+
+        & .discoverCard {
+            & .details {
+                position: absolute;
+                top: 2rem;
+                left: 2rem;
+                color: var(--color-white);
+                z-index: 11;
+                width: 100%;
+                height: 70%;
+
+                & p {
+                    font-size: 1.5rem;
+                    margin: 30px 0;
+                }
+
+                & button {
+                    bottom: 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    button {
+        padding: 9px 12px;
+        font-size: 1rem;
+        border-radius: 3px;
+    }
+
+    .banner {
+        & .bannerCaption {
+            bottom: 5px;
+            text-align: center;
+
+            & p {
+                font-size: 1.2rem;
+            }
+
+            & button {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .navCenter {
+        display: none;
+    }
+
+    .searchBar {
+        flex-wrap: wrap;
+    }
+
+    .offerSection {
+        flex-direction: column;
+
+        & .details {
+            width: 100%;
+        }
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    .discoverCard {
+        & .details {
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            color: var(--color-white);
+            z-index: 11;
+
+            & p {
+                font-size: 1rem;
+                margin: 30px 0;
+                width: 100%;
+            }
+
+            & button {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.inactive {
+    display: none !important;
+}

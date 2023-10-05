@@ -1,0 +1,208 @@
+@import url('./variable.css');
+
+html body {
+    font-size: 14px;
+    background-color: var(--color-white);
+    font-weight: 500;
+}
+
+.container {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+header nav {
+    color: var(--color-black);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (max-width: 1050px) {
+        & .navRight li {
+            display: none;
+        }
+    }
+
+    @media (max-width: 562px) {
+        & .searchBar input {
+            display: none;
+        }
+    }
+}
+
+.searchBar {
+    border: 1px solid var(--color-grey);
+    width: 20%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.filterMenu {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    & li {
+        border: 1px solid var(--color-grey);
+        border-radius: 2rem;
+        padding: 6px 15px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+            color: var(--color-red);
+            box-shadow: 0 0 3px var(--color-red);
+            border-color: var(--color-red);
+        }
+
+        & span {
+            font-size: 1rem;
+        }
+    }
+}
+
+.showListingSection {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 72vh;
+    overflow: auto;
+    justify-content: space-between;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @media (max-width: 650px) {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+
+        & .mapSearch {
+            width: 100%;
+            aspect-ratio: 2/1.5;
+        }
+
+
+    }
+
+    & .hotelsList {
+        width: 50%;
+        height: 100%;
+        overflow: auto;
+        padding: 10px;
+
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+
+        & .hotelCards {
+            display: flex;
+            cursor: pointer;
+            margin-top: 10px;
+            padding-top: 10px;
+
+            &:hover {
+                & img {
+                    scale: 1.01;
+                }
+            }
+
+            @media (max-width: 1050px) {
+                flex-direction: column;
+                width: 100%;
+
+                & .hotelDetails {
+                    width: 100%;
+                }
+
+                & img {
+                    width: 100%;
+                }
+            }
+
+            border-top: 1px solid var(--color-grey);
+            gap: 20px;
+            align-items: center;
+
+            & img {
+                width: 250px;
+                aspect-ratio: 2/1.3;
+                border-radius: 8px;
+                transition: all 0.1s;
+            }
+
+            & .hotelDetails {
+                display: flex;
+                align-self: center;
+                justify-content: space-between;
+
+                & .leftSection {
+                    width: 75%;
+
+                    & ul {
+                        flex-wrap: wrap;
+                        margin: 8px 0 !important;
+
+                        & li {
+                            padding: 0px !important;
+
+                            &:hover {
+                                color: var(--color-red);
+                            }
+                        }
+                    }
+
+                    & #title {
+                        font-size: 1.2rem;
+                    }
+
+                    & #hotelSummary {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        color: var(--color-darkgrey);
+                    }
+
+                    & #rating {
+                        align-self: flex-end;
+                    }
+                }
+
+                & .rightSection {
+                    width: 30%;
+                    justify-self: flex-end;
+                    text-align: right;
+                    position: relative;
+
+                    & p {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                        & span {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.mapSearch {
+    width: 45%;
+    border-radius: 5px;
+    justify-self: flex-end;
+    border: 1px solid;
+    height: 100%;
+}
+
+.text-icon {
+    background-color: var(--color-white);
+    font-weight: 500;
+    font-size: 0.8rem;
+    padding: 2px 3px;
+}
